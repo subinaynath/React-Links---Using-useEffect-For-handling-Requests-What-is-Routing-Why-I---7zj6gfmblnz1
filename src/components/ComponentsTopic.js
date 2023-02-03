@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const ComponentsTopic = () => {
+  const history = useHistory();
   return (
     <div id="components-div">
       <h3>Components in React</h3>
-      <button id="topics-back-button">
-      <Link to="/topics">Back</Link>
+      <button onClick={()=> history.goBack()} id="components-back-button">
+        Back
       </button>
     </div>
   );

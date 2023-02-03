@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const RenderingTopic = () => {
+  const history = useHistory();
   return (
     <div id="rendering-div">
       <h3>Rendering in React</h3>
-      <button id="topics-back-button">
-      <Link to="/topics">Back</Link>
+      <button onClick={()=> history.goBack()} id="rendering-back-button">
+        Back
       </button>
     </div>
   )
